@@ -15,9 +15,9 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="kawaii-decoration decoration-1">🌸</div>
-    <div class="kawaii-decoration decoration-2">⭐</div>
-    <div class="kawaii-decoration decoration-3">🦄</div>
+    <div class="kawaii-decoration decoration-1"></div>
+    <div class="kawaii-decoration decoration-2"></div>
+    <div class="kawaii-decoration decoration-3"></div>
 
     <header class="header">
         <nav class="navbar">
@@ -25,12 +25,15 @@
                 <i class="fas fa-magic"></i>
                 El Bolsillo Mágico
             </a>
-            <ul class="nav-menu">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#productos">Productos</a></li>
-                <li><a href="#nosotros">Nosotros</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                <li><a href="#productos" class="nav-link">Productos</a></li>
+                <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
+                <li><a href="#contacto" class="nav-link">Contacto</a></li>
             </ul>
+            <div class="nav-toggle" id="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
         </nav>
     </header>
 
@@ -38,7 +41,6 @@
         <div data-aos="fade-up">
             <h1>El Bolsillo Mágico</h1>
             <p class="tagline">La primera tienda Kawaii-Geek de Chachapoyas 🎁</p>
-            <div class="hero-emoji">🌟✨🦄</div>
             <div class="cta-buttons">
                 <a href="#productos" class="btn btn-primary">
                     <i class="fas fa-shopping-bag"></i>
@@ -53,12 +55,12 @@
     </section>
 
     <section id="productos" class="section">
-        <h2 class="section-title" data-aos="fade-up">Nuestros Productos Kawaii</h2>
+        <h2 class="section-title" data-aos="fade-up">Nuestros Productos</h2>
         
         <div class="categories" data-aos="fade-up" data-aos-delay="100">
             <button class="category-btn active" data-category="todos">Todos</button>
             <button class="category-btn" data-category="anime">Anime</button>
-            <button class="category-btn" data-category="papeleria">Papelería Kawaii</button>
+            <button class="category-btn" data-category="papeleria">Papelería</button>
             <button class="category-btn" data-category="gadgets">Gadgets</button>
             <button class="category-btn" data-category="accesorios">Accesorios</button>
         </div>
@@ -66,103 +68,37 @@
         <div class="products-grid" id="products-container">
             <div class="product-card" data-category="anime" data-aos="zoom-in">
                 <div class="product-image">🎌</div>
-                <h3 class="product-name">Figura Anime Kawaii</h3>
+                <h3 class="product-name">Figura Anime</h3>
                 <p class="product-price">S/. 45.00</p>
                 <p class="product-description">Adorable figura de anime de alta calidad, perfecta para coleccionistas.</p>
-                <a href="https://wa.me/51992812184?text=¡Hola! Me interesa la Figura Anime Kawaii por S/. 45.00 😊" class="btn btn-primary" target="_blank" rel="noopener">
+                <a href="https://wa.me/51992812184?text=¡Hola! Me interesa la Figura Anime por S/. 45.00 😊" class="btn btn-primary" target="_blank" rel="noopener">
                     <i class="fab fa-whatsapp"></i> Consultar
                 </a>
             </div>
             <div class="product-card" data-category="papeleria" data-aos="zoom-in" data-aos-delay="100">
                 <div class="product-image">📝</div>
-                <h3 class="product-name">Set de Stickers Kawaii</h3>
+                <h3 class="product-name">Set de Stickers</h3>
                 <p class="product-price">S/. 12.00</p>
-                <p class="product-description">Colección de stickers súper tiernos para decorar tu agenda o cuadernos.</p>
-                <a href="https://wa.me/51992812184?text=¡Hola! Me interesa el Set de Stickers Kawaii por S/. 12.00 🌸" class="btn btn-primary" target="_blank" rel="noopener">
+                <p class="product-description">Colección de stickers para decorar tu agenda o cuadernos.</p>
+                <a href="https://wa.me/51992812184?text=¡Hola! Me interesa el Set de Stickers por S/. 12.00 🌸" class="btn btn-primary" target="_blank" rel="noopener">
                     <i class="fab fa-whatsapp"></i> Consultar
                 </a>
             </div>
-            <div class="product-card" data-category="gadgets" data-aos="zoom-in" data-aos-delay="200">
-                <div class="product-image">📱</div>
-                <h3 class="product-name">Cargador Portátil Kawaii</h3>
-                <p class="product-price">S/. 35.00</p>
-                <p class="product-description">Power bank con diseño adorable de gatito, perfecta para tus dispositivos.</p>
-                <a href="https://wa.me/51992812184?text=¡Hola! Me interesa el Cargador Portátil Kawaii por S/. 35.00 🔋" class="btn btn-primary" target="_blank" rel="noopener">
-                    <i class="fab fa-whatsapp"></i> Consultar
-                </a>
             </div>
-            <div class="product-card" data-category="accesorios" data-aos="zoom-in" data-aos-delay="300">
-                <div class="product-image">👜</div>
-                <h3 class="product-name">Mochila Kawaii</h3>
-                <p class="product-price">S/. 65.00</p>
-                <p class="product-description">Mochila súper kawaii con orejas de gato, perfecta para el día a día.</p>
-                <a href="https://wa.me/51992812184?text=¡Hola! Me interesa la Mochila Kawaii por S/. 65.00 🎒" class="btn btn-primary" target="_blank" rel="noopener">
-                    <i class="fab fa-whatsapp"></i> Consultar
-                </a>
-            </div>
-             <div class="product-card" data-category="papeleria" data-aos="zoom-in" data-aos-delay="400">
-                <div class="product-image">✏️</div>
-                <h3 class="product-name">Agenda Kawaii 2025</h3>
-                <p class="product-price">S/. 28.00</p>
-                <p class="product-description">Agenda anual con diseños kawaii únicos, perfecta para organizar tu año.</p>
-                <a href="https://wa.me/51992812184?text=¡Hola! Me interesa la Agenda Kawaii 2025 por S/. 28.00 📅" class="btn btn-primary" target="_blank" rel="noopener">
-                    <i class="fab fa-whatsapp"></i> Consultar
-                </a>
-            </div>
-            <div class="product-card" data-category="anime" data-aos="zoom-in" data-aos-delay="500">
-                <div class="product-image">🧸</div>
-                <h3 class="product-name">Peluche Anime</h3>
-                <p class="product-price">S/. 40.00</p>
-                <p class="product-description">Peluche súper suave de tu personaje de anime favorito.</p>
-                <a href="https://wa.me/51992812184?text=¡Hola! Me interesa el Peluche Anime por S/. 40.00 🧸" class="btn btn-primary" target="_blank" rel="noopener">
-                    <i class="fab fa-whatsapp"></i> Consultar
-                </a>
-            </div>
-        </div>
     </section>
 
     <section id="nosotros" class="section">
-        <h2 class="section-title" data-aos="fade-up">Sobre Nosotros</h2>
-        <div class="about-content" data-aos="fade-up" data-aos-delay="100">
-            <p>¡Bienvenidos a El Bolsillo Mágico! 🌟</p>
-            <p>Somos la primera tienda especializada en productos kawaii y geek de Chachapoyas. Nuestra misión es traer un poco de magia y ternura a tu día a día con productos únicos y adorables que no encontrarás en ningún otro lugar.</p>
-            <p>¡Ven y descubre la magia que tenemos guardada para ti! ✨</p>
-        </div>
-    </section>
-
+        </section>
     <section id="contacto" class="section">
-        <h2 class="section-title" data-aos="fade-up">¡Encuéntranos!</h2>
-        
-        <div class="contact-info" data-aos="fade-up" data-aos-delay="100">
-            <div class="contact-item"><i class="fas fa-map-marker-alt"></i><span>Jirón Ayacucho 426, Chachapoyas</span></div>
-            <div class="contact-item"><i class="fas fa-phone"></i><span>📱 992 812 184</span></div>
-            <div class="contact-item"><i class="fas fa-clock"></i><span>Lun - Sáb: 9:00 AM - 8:00 PM</span></div>
-            
-            <div class="social-links">
-                <a href="#" class="social-link facebook" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="social-link instagram" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="social-link tiktok" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
-            </div>
-        </div>
-
-        <div class="map-container" data-aos="fade-up" data-aos-delay="200">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.9419137025173!2d-77.8698986852261!3d-6.23091199558913!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91b428d01f5c6b6b%3A0x6b6932b63897d2c3!2sJir%C3%B3n%20Ayacucho%20426%2C%20Chachapoyas%2001001!5e0!3m2!1ses-419!2spe!4v1678886400000!5m2!1ses-419!2spe" width="100%" height="100%" class="map-iframe" allowfullscreen="" loading="lazy" title="Ubicación de El Bolsillo Mágico en Google Maps"></iframe>
-        </div>
-    </section>
-
+        </section>
+    <footer class="footer">
+        </footer>
+    
     <a href="https://wa.me/51992812184?text=¡Hola! Me gustaría conocer más sobre El Bolsillo Mágico 😊✨" class="whatsapp-float" target="_blank" rel="noopener" title="¡Chatea con nosotros!">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <footer class="footer">
-        <div class="footer-content">
-            <p>&copy; 2025 El Bolsillo Mágico - Chachapoyas. Todos los derechos reservados.</p>
-            <p class="footer-kawaii">✨ Hecho con mucho amor kawaii ✨</p>
-        </div>
-    </footer>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    
     <script src="js/main.js"></script>
 </body>
 </html>

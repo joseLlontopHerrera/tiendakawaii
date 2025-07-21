@@ -1,5 +1,26 @@
 document.addEventListener('DOMContentLoaded', function() {
 
+    // --- Lógica para el menú de navegación móvil ---
+    const navMenu = document.getElementById('nav-menu');
+    const navToggle = document.getElementById('nav-toggle');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    // Función para mostrar/ocultar el menú
+    if (navToggle) {
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('show-menu');
+        });
+    }
+
+    // Función para cerrar el menú al hacer clic en un enlace
+    const linkAction = () => {
+        navMenu.classList.remove('show-menu');
+    }
+    navLinks.forEach(link => link.addEventListener('click', linkAction));
+
+
+    // --- El resto del código permanece igual ---
+
     // Initialize AOS (Animate On Scroll)
     AOS.init({
         duration: 800,
@@ -32,17 +53,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     filterButtons.forEach(button => {
         button.addEventListener('click', function() {
-            // Update active button
             filterButtons.forEach(btn => btn.classList.remove('active'));
             this.classList.add('active');
-
             const category = this.getAttribute('data-category');
 
-            // Filter products
             products.forEach(product => {
                 if (category === 'todos' || product.dataset.category === category) {
                     product.style.display = 'block';
-                    // Re-trigger AOS animation
                     product.classList.add('aos-animate'); 
                 } else {
                     product.style.display = 'none';
@@ -51,42 +68,4 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     });
-
-    // Header background change on scroll
-    window.addEventListener('scroll', function() {
-        const header = document.querySelector('.header');
-        if (window.scrollY > 50) {
-            header.style.background = 'rgba(255, 255, 255, 0.98)';
-        } else {
-            header.style.background = 'rgba(255, 255, 255, 0.95)';
-        }
-    });
-    
-    // Add click ripple effect to buttons
-    document.querySelectorAll('.btn').forEach(button => {
-        button.addEventListener('click', function(e) {
-            const ripple = document.createElement('span');
-            const rect = this.getBoundingClientRect();
-            const size = Math.max(rect.width, rect.height);
-            const x = e.clientX - rect.left - size / 2;
-            const y = e.clientY - rect.top - size / 2;
-            
-            ripple.style.cssText = `
-                position: absolute;
-                width: ${size}px;
-                height: ${size}px;
-                left: ${x}px;
-                top: ${y}px;
-                background: rgba(255, 255, 255, 0.5);
-                border-radius: 50%;
-                transform: scale(0);
-                animation: ripple 0.6s ease-out;
-                pointer-events: none;
-            `;
-            
-            this.appendChild(ripple);
-            setTimeout(() => ripple.remove(), 600);
-        });
-    });
-
 });
